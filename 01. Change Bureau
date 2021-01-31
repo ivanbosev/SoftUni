@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Test {
+    public static void main ( String[] args ) {
+        Scanner scanner = new Scanner ( System.in );
+
+        int nBitcoins = Integer.parseInt ( scanner.nextLine ( ) )*1168;
+        double nChina = Double.parseDouble ( scanner.nextLine ( ) )*0.15;
+        double com = Double.parseDouble ( scanner.nextLine ( ) );
+
+        double totalsum = (nBitcoins + nChina*1.76)/1.95;
+        double discount = totalsum-(totalsum*(com*0.01));
+
+        System.out.printf ("%.2f",totalsum -(totalsum- discount ));
+
+
+    }
+}
